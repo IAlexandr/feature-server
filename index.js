@@ -6,9 +6,6 @@ var options = require('./options');
 
 var app = express();
 
-var bodyParser = require('body-parser');
-var jsonParser = bodyParser.json();
-
 app.set('json spaces', 2);
 
 app.use(iisBaseUrl());
@@ -20,7 +17,7 @@ app.get('/', function (req, res) {
   return res.send('Feature-server v' + options.version);
 });
 
-app.use('/services/tractors', jsonParser, require('./lib/router'));
+app.use('/services/tractors', require('./lib/router'));
 
 var port = options.port;
 
