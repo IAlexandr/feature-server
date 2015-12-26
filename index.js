@@ -4,6 +4,8 @@ var options = require('./options');
 
 var app = express();
 
+app.set('json spaces', 2);
+
 app.use(iisBaseUrl());
 
 app.get('/', function (req, res) {
