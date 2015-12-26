@@ -3,10 +3,12 @@ var optionsSpec = {
     required: true,
     default: '8060',
     env: 'PORT'
-  }
+  },
 };
 
-var options = {};
+var options = {
+  version: require('./package.json').version
+};
 Object.keys(optionsSpec).forEach(function (key) {
   var item = optionsSpec[key];
   if (!item.preprocess) {
