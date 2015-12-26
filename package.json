@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/IAlexandr/feature-server#readme",
   "dependencies": {
+    "body-parser": "^1.14.2",
     "express": "^4.13.3",
     "iis-baseurl": "0.0.6"
   }
